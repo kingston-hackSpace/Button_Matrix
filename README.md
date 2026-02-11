@@ -1,14 +1,15 @@
 # Button Matrix with Arduino
 
-### Understanding buttons
+### About buttons
 
-If you are new usin buttons with Arduino, start folowing [this tutorial](https://github.com/kingston-hackSpace/Push-button).
-If will help you understand for further development. 
+If you are new using buttons with Arduino, start following [this tutorial](https://github.com/kingston-hackSpace/Push-button).
+
+It will help you understand for further development. 
 
 -------------------
 # TUTORIAL
 
-In this tutorial you will learn how to build a button matrix to trigger events.
+In this tutorial you will learn how to build a button matrix to trigger events with Arduino.
 
 ----
 ### HARDWARE
@@ -24,23 +25,71 @@ In this tutorial you will learn how to build a button matrix to trigger events.
 ----
 ### WIRING
 
+Warning! Diodes are used to prevent ghosting when multiple buttons are pressed simultaneously.
+Diodes have polarity, meaning that their leads should be correctly connected. 
+Please see [this image] to wire your circuit correctly. 
+
 See wiring diagram [here]
 
 ----
 ### CODE and INSTRUCTIONS
 
-Explore the following code examples in the order provided:
+Explore the following code examples in the order provided below.
+
+Upload the code to your Arduino board and test the buttons. Check the Serial Monitor. 
 
 [EXAMPLE 1 : Simple Button - Matrix]
 
 [EXAMPLE 2 : Button Matrix ABC]
 
-[EXAMPLE 2 : Button Matrix ABC-array]
+[EXAMPLE 3 : Button Matrix ABC-array]
+
+
+----
+### How a Button Matrix Works
+
+- Rows are scanned one at a time
+
+- Columns are read as inputs
+
+- This reduces pin usage
+
+---
+### Why We Use Diodes in a Button Matrix
+
+When multiple buttons are pressed at the same time in a matrix, unwanted electrical paths can appear between rows and columns.
+This problem is called ghosting.
+
+Ghosting can make the Arduino detect:
+
+- A button that was not pressed
+
+- Multiple buttons when only two were pressed
+
+- Incorrect row–column combinations
+
+**What the diode does:**
+
+A diode allows current to flow in only one direction.
+
+By placing a diode in series with each button:
+
+- Current cannot flow backwards through the matrix
+
+- Rows stay electrically isolated from each other
+
+- Only the intended row–column connection is detected
+
+- This ensures that pressing multiple buttons does not create false signals.
+
+*Important*: Diodes have polarity. They must be connected according to the wiring diagram.
+
+
 
 ----
 # PENDING
 
-(Arduino Uno may run out of pins/processing capaccity. Use another board)
+(Arduino Uno may run out of pins/processing capacity if you add motors or LEDs. Use another board)
 
 HOW TO TRIGGER AN LED MATRIX WITH OUR BUTTON MATRIX (pending)
 

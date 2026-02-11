@@ -25,7 +25,7 @@ In this tutorial you will learn how to build a button matrix to trigger events w
 ----
 ### WIRING
 
-Warning! Diodes are used to prevent ghosting when multiple buttons are pressed simultaneously.
+Caution! Diodes are used to prevent ghosting when multiple buttons are pressed simultaneously.
 Diodes have polarity, meaning that their leads should be correctly connected. 
 Please see [this image] to wire your circuit correctly. 
 

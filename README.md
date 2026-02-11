@@ -40,12 +40,15 @@ Explore the following code examples in the order provided below.
 Upload the code to your Arduino board and test the buttons. Check the Serial Monitor. 
 
 [EXAMPLE 1 : Simple Button - Matrix](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/1_Simple_Button_Matrix.ino)
+
 In this code, you will learn how to read button collums and rows.
 
 [EXAMPLE 2 : Button Matrix ABC](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/2_Button_Matrix_ABC.ino)
+
 In this code, you will change the printing result from collums and rows to Letters. 
 
 [EXAMPLE 3 : Button Matrix ABC-array](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/3_Button_Matrix_ABC-array.ino)
+
 This code improves the previous code (more efficient)
 
 

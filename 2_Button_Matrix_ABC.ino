@@ -1,0 +1,84 @@
+// Define the number of rows and columns in the matrix
+const int numRows = 2;
+const int numCols = 3;
+
+// Define the pins connected to the rows and columns of the matrix
+const int rowPins[numRows] = {2, 3};   // Pins connected to the rows
+const int colPins[numCols] = {4, 5, 6};     // Pins connected to the columns
+
+// Define a 2D array to store the state of each button in the matrix
+int buttonState[numRows][numCols];
+
+// Define variables to store the previous state of each button
+int prevButtonState[numRows][numCols];
+
+void setup() {
+  // Initialize serial communication for debugging
+  Serial.begin(9600);
+
+  // Initialize the button matrix pins as INPUT_PULLUP
+  for (int i = 0; i < numRows; i++) {
+    pinMode(rowPins[i], OUTPUT);
+    digitalWrite(rowPins[i], HIGH); // Pull-up resistors for the rows
+  }
+  for (int i = 0; i < numCols; i++) {
+    pinMode(colPins[i], INPUT_PULLUP);
+  }
+}
+
+void loop() {
+  // Read the state of each button in the matrix
+  for (int row = 0; row < numRows; row++) {
+    // Set current row to LOW to activate it
+    digitalWrite(rowPins[row], LOW);
+    
+    // Read the state of each button in the current row
+    for (int col = 0; col < numCols; col++) {
+      buttonState[row][col] = digitalRead(colPins[col]);
+      
+      // If the button state has changed from HIGH to LOW, register a button press
+      if (buttonState[row][col] == LOW && prevButtonState[row][col] == HIGH) {
+
+        ////////////// ROW 1
+        //A
+        if (col+1 == 1 && row+1 == 1){
+        Serial.println("this is A");
+        }
+
+        //B
+        if (col+1 == 2 && row+1 == 1){
+        Serial.println("this is B");
+        }
+
+        //C
+        if (col+1 == 3 && row+1 == 1){
+        Serial.println("this is C");
+        }
+
+        ////////////// ROW 2
+        if (col+1 == 1 && row+1 == 2){
+        Serial.println("this is D");
+        }
+
+        //B
+        if (col+1 == 2 && row+1 == 2){
+        Serial.println("this is E");
+        }
+
+        //C
+        if (col+1 == 3 && row+1 == 2){
+        Serial.println("this is F");
+        }
+      }
+      
+      // Update the previous button state
+      prevButtonState[row][col] = buttonState[row][col];
+    }
+    
+    // Set current row back to HIGH
+    digitalWrite(rowPins[row], HIGH);
+  }
+  
+  // Add a small delay to debounce the buttons
+  delay(50);
+}

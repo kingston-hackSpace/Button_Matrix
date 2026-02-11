@@ -35,21 +35,19 @@ See wiring diagram [here]
 ----
 ### CODE and INSTRUCTIONS
 
-Explore the following code examples in the order provided below.
-
-Upload the code to your Arduino board and test the buttons. Check the Serial Monitor. 
+Upload each example to your Arduino board and test the buttons. Open the Serial Monitor to see the results. Follow the examples in the order below to build your understanding step by step.
 
 [EXAMPLE 1 : Simple Button - Matrix](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/1_Simple_Button_Matrix.ino)
 
-In this code, you will learn how to read button collums and rows.
+Learn how to read the states of rows and columns in a basic button matrix.
 
 [EXAMPLE 2 : Button Matrix ABC](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/2_Button_Matrix_ABC.ino)
 
-In this code, you will change the printing result from collums and rows to Letters. 
+Map row and column positions to meaningful letters.
 
 [EXAMPLE 3 : Button Matrix ABC-array](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/3_Button_Matrix_ABC-array.ino)
 
-This code improves the previous code (more efficient)
+Improve efficiency and readability of your code.
 
 
 ----

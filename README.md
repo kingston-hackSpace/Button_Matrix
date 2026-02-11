@@ -28,9 +28,9 @@ In this tutorial you will learn how to build a button matrix to trigger events w
 Caution! 
 
 Diodes have polarity, meaning that their leads should be correctly connected. 
-Please see [this image](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/Diode.png) to wire your circuit correctly. 
+Please see [diode polarity here](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/Diode.png) to wire your circuit correctly. 
 
-See wiring diagram [here]
+See wiring diagram [here](https://github.com/kingston-hackSpace/Button_Matrix/blob/main/2x6_Button_matrix_bb.jpg)
 
 ----
 ### CODE and INSTRUCTIONS
